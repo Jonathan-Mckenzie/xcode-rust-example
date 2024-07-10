@@ -4,6 +4,10 @@
 
 Demonstrates the ability to generate the necessary bindings for a rust lib compiled for an apple target to be embedded and called by a Swift project in Xcode.
 
+## pre-reqs
+1. [cargo](https://rustup.rs/)
+1. xcode from [Apple app store](https://apps.apple.com/us/app/xcode/id497799835)
+
 ## Setup
 
 `rustylib` rust library with two exposed functions  
@@ -19,5 +23,3 @@ Demonstrates the ability to generate the necessary bindings for a rust lib compi
 - https://boehs.org/node/uniffi
 - https://forgen.tech/en/blog/post/building-an-ios-app-with-rust-using-uniffi
 - https://krirogn.dev/blog/integrate-rust-in-ios#make-the-library
-
-

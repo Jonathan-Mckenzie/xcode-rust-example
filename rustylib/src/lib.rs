@@ -2,7 +2,7 @@ uniffi::setup_scaffolding!();
  
 #[uniffi::export]
 fn rust_hello() -> String {
-    "Hello from Rust! (update)".to_string()
+    "Hello from Rust!".to_string()
 }
 
 #[uniffi::export]
