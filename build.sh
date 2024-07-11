@@ -1,4 +1,5 @@
 MY_CRATE=rustylib
+SWIFT_APP=swiftyapp
 SWIFT_PROJECT=swiftyrustlib
 SWIFT_PROJECT_NAME=RustyLib
 SWIFT_CORE_NAME=RustyCore
@@ -35,18 +36,22 @@ xcodebuild -create-xcframework \
 
 rm -rf "${NEW_HEADER_DIR}"
 
+cd ../
+
+SWIFT_LIB_PATH="./${SWIFT_APP}/Lib/${SWIFT_PROJECT}"
+
 # step 3 - move to SwiftLib artifacts
-if [ -d "../${SWIFT_PROJECT}/artifacts" ]; then
-    rm -rf "../${SWIFT_PROJECT}/artifacts"
+if [ -d "${SWIFT_LIB_PATH}/artifacts" ]; then
+    rm -rf "${SWIFT_LIB_PATH}/artifacts"
 fi
-mkdir "../${SWIFT_PROJECT}/artifacts"
-cp -R "${OUTDIR}/${MY_CRATE}_framework.xcframework" "../${SWIFT_PROJECT}/artifacts"
-mv "../${SWIFT_PROJECT}/artifacts/${MY_CRATE}_framework.xcframework" "../${SWIFT_PROJECT}/artifacts/${SWIFT_CORE_NAME}.xcframework"
+mkdir "${SWIFT_LIB_PATH}/artifacts"
+cp -R "./${MY_CRATE}/${MY_CRATE}_framework.xcframework" "${SWIFT_LIB_PATH}/artifacts"
+mv "${SWIFT_LIB_PATH}/artifacts/${MY_CRATE}_framework.xcframework" "${SWIFT_LIB_PATH}/artifacts/${SWIFT_CORE_NAME}.xcframework"
 
 # step 4 - move to SwiftLib Sources
-if [ -d "../${SWIFT_PROJECT}/Sources" ]; then
-    rm -rf "../${SWIFT_PROJECT}/Sources"
+if [ -d "${SWIFT_LIB_PATH}/Sources" ]; then
+    rm -rf "${SWIFT_LIB_PATH}/Sources"
 fi
-mkdir "../${SWIFT_PROJECT}/Sources"
-mkdir "../${SWIFT_PROJECT}/Sources/${SWIFT_PROJECT_NAME}"
-cp "${OUTDIR}/out/${MY_CRATE}.swift" "../${SWIFT_PROJECT}/Sources/${SWIFT_PROJECT_NAME}/${SWIFT_PROJECT_NAME}.swift"
+mkdir "${SWIFT_LIB_PATH}/Sources"
+mkdir "${SWIFT_LIB_PATH}/Sources/${SWIFT_PROJECT_NAME}"
+cp "./${MY_CRATE}/out/${MY_CRATE}.swift" "${SWIFT_LIB_PATH}/Sources/${SWIFT_PROJECT_NAME}/${SWIFT_PROJECT_NAME}.swift"
