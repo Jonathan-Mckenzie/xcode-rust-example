@@ -11,7 +11,8 @@
 		291DE5362C3DE74F007F9706 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291DE5352C3DE74F007F9706 /* ContentView.swift */; };
 		291DE5382C3DE74F007F9706 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 291DE5372C3DE74F007F9706 /* Assets.xcassets */; };
 		291DE53B2C3DE74F007F9706 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 291DE53A2C3DE74F007F9706 /* Preview Assets.xcassets */; };
-		298622D32C3F0D26009C64AA /* RustyLib in Frameworks */ = {isa = PBXBuildFile; productRef = 298622D22C3F0D26009C64AA /* RustyLib */; };
+		29603C292C3F8BDE00B29635 /* swiftyrustlib in Resources */ = {isa = PBXBuildFile; fileRef = 29603C282C3F8BDE00B29635 /* swiftyrustlib */; };
+		29603C2B2C3F8BE900B29635 /* RustyLib in Frameworks */ = {isa = PBXBuildFile; productRef = 29603C2A2C3F8BE900B29635 /* RustyLib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,7 +34,7 @@
 		291DE5352C3DE74F007F9706 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		291DE5372C3DE74F007F9706 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		291DE53A2C3DE74F007F9706 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		298622D12C3F0CCA009C64AA /* swiftyrustlib */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = swiftyrustlib; path = ../../swiftyrustlib; sourceTree = "<group>"; };
+		29603C282C3F8BDE00B29635 /* swiftyrustlib */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = swiftyrustlib; path = ../../swiftyrustlib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				298622D32C3F0D26009C64AA /* RustyLib in Frameworks */,
+				29603C2B2C3F8BE900B29635 /* RustyLib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,7 +52,7 @@
 		291DE5272C3DE74F007F9706 = {
 			isa = PBXGroup;
 			children = (
-				298622D02C3F0CAE009C64AA /* Lib */,
+				29603C272C3F8BB900B29635 /* Lib */,
 				291DE5322C3DE74F007F9706 /* swiftyapp */,
 				291DE5312C3DE74F007F9706 /* Products */,
 				291DE5412C3DE809007F9706 /* Frameworks */,
@@ -92,10 +93,10 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		298622D02C3F0CAE009C64AA /* Lib */ = {
+		29603C272C3F8BB900B29635 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				298622D12C3F0CCA009C64AA /* swiftyrustlib */,
+				29603C282C3F8BDE00B29635 /* swiftyrustlib */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -118,7 +119,7 @@
 			);
 			name = swiftyapp;
 			packageProductDependencies = (
-				298622D22C3F0D26009C64AA /* RustyLib */,
+				29603C2A2C3F8BE900B29635 /* RustyLib */,
 			);
 			productName = swiftyapp;
 			productReference = 291DE5302C3DE74F007F9706 /* swiftyapp.app */;
@@ -163,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				291DE53B2C3DE74F007F9706 /* Preview Assets.xcassets in Resources */,
+				29603C292C3F8BDE00B29635 /* swiftyrustlib in Resources */,
 				291DE5382C3DE74F007F9706 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,7 +383,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		298622D22C3F0D26009C64AA /* RustyLib */ = {
+		29603C2A2C3F8BE900B29635 /* RustyLib */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = RustyLib;
 		};
