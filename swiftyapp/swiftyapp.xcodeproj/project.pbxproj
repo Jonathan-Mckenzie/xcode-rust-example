@@ -11,9 +11,7 @@
 		291DE5362C3DE74F007F9706 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291DE5352C3DE74F007F9706 /* ContentView.swift */; };
 		291DE5382C3DE74F007F9706 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 291DE5372C3DE74F007F9706 /* Assets.xcassets */; };
 		291DE53B2C3DE74F007F9706 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 291DE53A2C3DE74F007F9706 /* Preview Assets.xcassets */; };
-		291DE5522C3DECDB007F9706 /* rustylib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291DE54E2C3DECDB007F9706 /* rustylib.swift */; };
-		291DE55B2C3DF40D007F9706 /* rustylib_framework.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 291DE55A2C3DF40D007F9706 /* rustylib_framework.xcframework */; };
-		291DE55C2C3DF40D007F9706 /* rustylib_framework.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 291DE55A2C3DF40D007F9706 /* rustylib_framework.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		298622D32C3F0D26009C64AA /* RustyLib in Frameworks */ = {isa = PBXBuildFile; productRef = 298622D22C3F0D26009C64AA /* RustyLib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,7 +21,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				291DE55C2C3DF40D007F9706 /* rustylib_framework.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -36,10 +33,7 @@
 		291DE5352C3DE74F007F9706 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		291DE5372C3DE74F007F9706 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		291DE53A2C3DE74F007F9706 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		291DE54E2C3DECDB007F9706 /* rustylib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rustylib.swift; sourceTree = "<group>"; };
-		291DE54F2C3DECDB007F9706 /* rustylibFFI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rustylibFFI.h; sourceTree = "<group>"; };
-		291DE5502C3DECDB007F9706 /* rustylibFFI.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = rustylibFFI.modulemap; sourceTree = "<group>"; };
-		291DE55A2C3DF40D007F9706 /* rustylib_framework.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = rustylib_framework.xcframework; path = ../rustylib/rustylib_framework.xcframework; sourceTree = "<group>"; };
+		298622D12C3F0CCA009C64AA /* swiftyrustlib */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = swiftyrustlib; path = ../../swiftyrustlib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				291DE55B2C3DF40D007F9706 /* rustylib_framework.xcframework in Frameworks */,
+				298622D32C3F0D26009C64AA /* RustyLib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,7 +51,7 @@
 		291DE5272C3DE74F007F9706 = {
 			isa = PBXGroup;
 			children = (
-				291DE5512C3DECDB007F9706 /* out */,
+				298622D02C3F0CAE009C64AA /* Lib */,
 				291DE5322C3DE74F007F9706 /* swiftyapp */,
 				291DE5312C3DE74F007F9706 /* Products */,
 				291DE5412C3DE809007F9706 /* Frameworks */,
@@ -94,20 +88,16 @@
 		291DE5412C3DE809007F9706 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				291DE55A2C3DF40D007F9706 /* rustylib_framework.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		291DE5512C3DECDB007F9706 /* out */ = {
+		298622D02C3F0CAE009C64AA /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				291DE54E2C3DECDB007F9706 /* rustylib.swift */,
-				291DE54F2C3DECDB007F9706 /* rustylibFFI.h */,
-				291DE5502C3DECDB007F9706 /* rustylibFFI.modulemap */,
+				298622D12C3F0CCA009C64AA /* swiftyrustlib */,
 			);
-			name = out;
-			path = ../rustylib/out;
+			path = Lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +117,9 @@
 			dependencies = (
 			);
 			name = swiftyapp;
+			packageProductDependencies = (
+				298622D22C3F0D26009C64AA /* RustyLib */,
+			);
 			productName = swiftyapp;
 			productReference = 291DE5302C3DE74F007F9706 /* swiftyapp.app */;
 			productType = "com.apple.product-type.application";
@@ -181,7 +174,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				291DE5522C3DECDB007F9706 /* rustylib.swift in Sources */,
 				291DE5362C3DE74F007F9706 /* ContentView.swift in Sources */,
 				291DE5342C3DE74F007F9706 /* swiftyappApp.swift in Sources */,
 			);
@@ -387,6 +379,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		298622D22C3F0D26009C64AA /* RustyLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RustyLib;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 291DE5282C3DE74F007F9706 /* Project object */;
 }

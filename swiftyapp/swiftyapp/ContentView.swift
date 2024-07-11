@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import RustyLib
 
 struct ContentView: View {
     var body: some View {
